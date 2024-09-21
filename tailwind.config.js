@@ -13,6 +13,7 @@ export default {
         'dark-bg': '#0E1018',
         'light-bg': '#F0F2F5',
         primary:'#1a1f2c',
+        'border':'#DBDFE5',
         secondary:'#576076',
         'senior-secondary':'#4770ff',
       },

@@ -3,11 +3,9 @@ import React, { createContext, useEffect, useState } from 'react'
 export const themeContext = createContext();
 
 export const ThemeContext = ({children})=>{
-    const [isDark, setIsDark] = useState(false);
+    const [isDark, setIsDark] = useState(true);
     useEffect(() => {
-        const savedMode = localStorage.getItem('isDark') === 'true';
-        console.log(savedMode);
-        
+        const savedMode = localStorage.getItem('isDark');
         setIsDark(savedMode);
       }, []);
     const handleTheme = ()=>{

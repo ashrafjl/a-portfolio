@@ -1,18 +1,22 @@
 import React, { useContext } from "react";
 import Card from "../components/Card";
 import { RiNextjsLine, RiTailwindCssFill } from "react-icons/ri";
+import { TbBrandReactNative } from "react-icons/tb";
 import {
   FaHtml5,
   FaCss3,
   FaJsSquare,
   FaReact,
-  FaArrowRight,
+  FaGithub,
+  FaNodeJs,
 } from "react-icons/fa";
 import CAPITAL_LOGO from "../assets/images/capitaltechnology.png";
 import KELLTON_LOGO from "../assets/images/kellton.png";
 import PROJECT_IMG1 from "../assets/images/project-1.png";
 import PROJECT_IMG2 from "../assets/images/project-2.png";
 import { themeContext } from "../context/ThemeContext";
+import { TbBrandTypescript, TbBrandMongodb,TbBrandRedux } from "react-icons/tb";
+
 
 const skills = [
   { id: 1, title: "HTML", image: <FaHtml5 />, color: "#DD4B25" },
@@ -20,7 +24,13 @@ const skills = [
   { id: 3, title: "JS", image: <FaJsSquare />, color: "#FFD02F" },
   { id: 4, title: "ReactJS", image: <FaReact />, color: "#00D1F7" },
   { id: 5, title: "NextJS", image: <RiNextjsLine />, color: "#000000" },
+  { id: 9, title: "NodeJs", image: <FaNodeJs  />, color: "#509941" },
   { id: 6, title: "Tailwind", image: <RiTailwindCssFill />, color: "#07B0CE" },
+  { id: 7, title: "React Native", image: <TbBrandReactNative  />, color: "#00D1F7" },
+  { id: 8, title: "TypeScript", image: <TbBrandTypescript  />, color: "#2F74C0" },
+  { id: 10, title: "MongoDB", image: <TbBrandMongodb  />, color: "#006548" },
+  { id: 11, title: "Redux", image: <TbBrandRedux  />, color: "#7248B6" },
+  { id: 12, title: "GitHub", image: <FaGithub  />, color: "#000000" },
 ];
 
 const Home = () => {
@@ -33,7 +43,7 @@ const Home = () => {
             <h4 className={`text-[24px] font-semibold ${context?.isDark ? 'text-dark-heading-color' : 'text-primary'}`}>
               Work Experience
             </h4>
-            <div className="w-full mt-[15px]">
+            <div className="w-full mt-[10px]">
               <div className="flex items-center w-full gap-4">
                 <div>
                   <p className="text-sm font-medium text-light-black">
@@ -58,7 +68,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex items-center w-full gap-4 mt-[15px]">
+              <div className="flex items-center w-full gap-4 mt-[10px]">
                 <div>
                   <p className="text-sm font-medium text-[#576076]">
                     2019 - 2022
@@ -91,13 +101,13 @@ const Home = () => {
               My Expertise
             </h4>
             <div>
-              <div className="flex items-center flex-wrap w-full gap-2 justify-between mt-[15px]">
+              <div className="flex items-center flex-wrap w-full gap-2 justify-between mt-[6px]">
                 {skills?.map((skill) => {
                   return (
                     <div className="" key={skill?.id + skill?.title}>
-                      <div className={`w-[90px] h-[60px] flex items-center justify-center rounded-[8px] overflow-hidden ${context?.isDark ? 'bg-dark-bg' : 'bg-light-bg'}`}>
+                      <div className={`w-[80px] h-[60px] flex items-center justify-center rounded-[8px] overflow-hidden ${context?.isDark ? 'bg-dark-bg' : 'bg-light-bg'}`}>
                         <span
-                          className={`flex items-center justify-center text-[32px] text-[${skill.color}]`}
+                          className={`flex items-center justify-center text-center text-[32px] text-[${skill.color}]`}
                           style={{
                             color:skill.color
                           }}
@@ -113,11 +123,11 @@ const Home = () => {
                 })}
               </div>
             </div>
-            <div className="mt-[6px]">
+            {/* <div className="mt-[6px]">
               <h4 className={`text-[16px] text-end cursor-pointer ${context?.isDark ? 'text-light-black' : 'text-primary'}`}>
                 View All
               </h4>
-            </div>
+            </div> */}
           </Card>
         </div>
       </div>
