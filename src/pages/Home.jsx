@@ -12,9 +12,10 @@ import {
 } from "react-icons/fa";
 import CAPITAL_LOGO from "../assets/images/capitaltechnology.png";
 import KELLTON_LOGO from "../assets/images/kellton.png";
-import PROJECT_IMG1 from "../assets/images/project-1.png";
-import PROJECT_IMG2 from "../assets/images/project-2.png";
 import { themeContext } from "../context/ThemeContext";
+import BLOG_WEB from "../assets/images/blogweb.png";
+import TMDB from "../assets/images/tmdb.png";
+import BLOG_ADMIN from "../assets/images/blogadmin.png";
 import { TbBrandTypescript, TbBrandMongodb,TbBrandRedux } from "react-icons/tb";
 
 
@@ -47,7 +48,7 @@ const Home = () => {
               <div className="flex items-center w-full gap-4">
                 <div>
                   <p className="text-sm font-medium text-light-black">
-                    2022 - 2024
+                    2022 - 2025
                   </p>
                 </div>
                 <div className="flex items-center gap-2">
@@ -136,11 +137,14 @@ const Home = () => {
           <h4 className={`text-[24px] font-semibold ${context?.isDark ? 'text-dark-heading-color' : 'text-primary'}`}>
             Recent Projects
           </h4>
-          <div className="rounded-[8px] overflow-hidden mt-[15px]">
-            <img src={PROJECT_IMG1} alt="" />
+          <div className="rounded-[8px] overflow-hidden mt-[15px] pb-2">
+            <a href="https://blog-pink-two-93.vercel.app" target="_blank"><img src={BLOG_WEB} alt="" /></a>
+          </div>
+          <div className="rounded-[8px] overflow-hidden py-[16px]">
+            <a href="https://tailadmin-git-main-ashraf-jamals-projects.vercel.app" target="_blank"><img src={BLOG_ADMIN} alt="" /></a>
           </div>
           <div className="rounded-[8px] overflow-hidden mt-[13px]">
-            <img src={PROJECT_IMG2} alt="" />
+            <a href="https://ratingmovies.netlify.app/" target="_blank"><img src={TMDB} alt="" /></a>
           </div>
         </Card>
       </div>

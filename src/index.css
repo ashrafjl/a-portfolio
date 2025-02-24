@@ -8,3 +8,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Styles for the progress bar */
+.progress-bar {
+  width: 0;  /* Start width at 0 */
+  transition: width 1s ease-in-out; /* Smooth transition for width change */
+}
+
+/* Add a class when the progress bar is in view */
+.progress-bar.in-view {
+  width: 100%;  /* This will animate to 100% */
+}

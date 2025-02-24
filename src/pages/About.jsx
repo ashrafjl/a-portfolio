@@ -4,6 +4,7 @@ import { themeContext } from "../context/ThemeContext";
 import CountUp from "../components/CountUp";
 import Tabs from "../components/Tabs";
 import Skills from "../components/Skills";
+import Experience from "../components/Experience";
 
 const tabsData = [
   {id:1,title:'Languages & Frameworks'},
@@ -43,25 +44,17 @@ const About = () => {
             </p>
           </div>
         </div>
-        <div className="max-w-[400px] mt-[30px]">
+        <div className="max-w-[600px] mt-[30px]">
           <p className="text-[24px] text-[#576076] font-medium leading-[140%]">
-            A passionate 
-            <span
-              className={`font-semibold ${
-                context?.isDark ? "text-dark-heading-color" : "text-[#576076]"
-              }`}
-            >
-              {" "}FrontEnd Developer
-            </span>{" "}
-            🖥️ dedicated to creating beautiful, user-friendly websites and applications that not only look great but also perform flawlessly.
+          A versatile Full-Stack Developer 🚀 passionate about building seamless, high-performance web applications from the ground up. Combining creativity with technical expertise, I deliver end-to-end solutions that are visually stunning, user-centric, and optimized for performance across all devices.
           </p>
         </div>
-        <div className="mt-[30px]">
-          <h4 className={`text-[24px] ${context?.isDark ? 'text-dark-heading-color' : 'text-primary'}`}>Skills</h4>
+        <div className="mt-8">
+          <Experience />
         </div>
-        <div>
+        {/* <div>
             <Skills />
-        </div>
+        </div> */}
       </div>
     </Card>
   );
