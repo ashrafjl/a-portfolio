@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import Profile from "../assets/profile.jpg";
+import RESUME from '../assets/ashrafupdatedresume.pdf'
 import Me from "../assets/images/me.jpg";
 import { FaWhatsapp } from "react-icons/fa";
 import {
@@ -8,14 +8,14 @@ import {
   RiGithubFill,
   RiLinkedinBoxFill,
 } from "react-icons/ri";
-import { themeContext } from "../context/ThemeContext";
+import { ThemeContext } from "../context/ThemeContext";
 import { SlDocs } from "react-icons/sl";
 import { MdOutlineEmail, MdContentCopy } from "react-icons/md";
 
 const Sidebar = () => {
   const email = import.meta.env.VITE_EMAIL;
   const phone = import.meta.env.VITE_PHONE;
-  const context = useContext(themeContext);
+  const context = useContext(ThemeContext);
 
   const handleCopy = () => {
     const tempInput = document.createElement("input");
@@ -82,6 +82,7 @@ const Sidebar = () => {
               WhatsApp
             </button>
           </a>
+          <a href={RESUME} target="_blank" className="w-full">
           <button className="bg-senior-secondary text-[white] h-[50px] leading-[50px] rounded-[8px] px-[10px] min-w-[120px] flex items-center justify-center gap-2 w-full">
             <span>
               {" "}
@@ -89,53 +90,70 @@ const Sidebar = () => {
             </span>
             Download Resume
           </button>
+          </a>
         </div>
         <div className="flex items-center justify-center gap-1 mt-[10px]">
-          <span
-            className={`w-[40px] h-[40px] leading-[40px] text-center rounded-[8px] flex items-center justify-center ${
-              context?.isDark
-                ? "bg-[#0E1018] border-none text-[#64748b]"
-                : "bg-transparent border border-[#dbdfe5]"
-            }`}
+          <a
+            href="https://www.facebook.com/ashraf.jamal.184881"
+            target="_blank"
           >
-            <RiFacebookCircleLine />
-          </span>
-          <span
-            className={`w-[40px] h-[40px] leading-[40px] border border-[#dbdfe5] text-center rounded-[8px] flex items-center justify-center ${
-              context?.isDark
-                ? "bg-[#0E1018] border-none text-[#64748b]"
-                : "bg-transparent border border-[#dbdfe5]"
-            }`}
+            <span
+              className={`w-[40px] h-[40px] leading-[40px] text-center rounded-[8px] flex items-center justify-center ${
+                context?.isDark
+                  ? "bg-[#0E1018] border-none text-[#64748b]"
+                  : "bg-transparent border border-[#dbdfe5]"
+              }`}
+            >
+              <RiFacebookCircleLine />
+            </span>
+          </a>
+          <a href="https://x.com/ashraflucky99" target="_blank">
+            <span
+              className={`w-[40px] h-[40px] leading-[40px] border border-[#dbdfe5] text-center rounded-[8px] flex items-center justify-center ${
+                context?.isDark
+                  ? "bg-[#0E1018] border-none text-[#64748b]"
+                  : "bg-transparent border border-[#dbdfe5]"
+              }`}
+            >
+              <RiTwitterXLine />
+            </span>
+          </a>
+          <a href="https://github.com/ashrafjl" target="_blank">
+            <span
+              className={`w-[40px] h-[40px] leading-[40px] border border-[#dbdfe5] text-center rounded-[8px] flex items-center justify-center ${
+                context?.isDark
+                  ? "bg-[#0E1018] border-none text-[#64748b]"
+                  : "bg-transparent border border-[#dbdfe5]"
+              }`}
+            >
+              <RiGithubFill />
+            </span>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/ashrafjl?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            target="_blank"
           >
-            <RiTwitterXLine />
-          </span>
-          <span
-            className={`w-[40px] h-[40px] leading-[40px] border border-[#dbdfe5] text-center rounded-[8px] flex items-center justify-center ${
-              context?.isDark
-                ? "bg-[#0E1018] border-none text-[#64748b]"
-                : "bg-transparent border border-[#dbdfe5]"
-            }`}
-          >
-            <RiGithubFill />
-          </span>
-          <span
-            className={`w-[40px] h-[40px] leading-[40px] border border-[#dbdfe5] text-center rounded-[8px] flex items-center justify-center ${
-              context?.isDark
-                ? "bg-[#0E1018] border-none text-[#64748b]"
-                : "bg-transparent border border-[#dbdfe5]"
-            }`}
-          >
-            <RiLinkedinBoxFill />
-          </span>
-          <span
-            className={`w-[40px] h-[40px] leading-[40px] border border-[#dbdfe5] text-center rounded-[8px] flex items-center justify-center ${
-              context?.isDark
-                ? "bg-[#0E1018] border-none text-[#64748b]"
-                : "bg-transparent border border-[#dbdfe5]"
-            }`}
-          >
-            <MdOutlineEmail />
-          </span>
+            <span
+              className={`w-[40px] h-[40px] leading-[40px] border border-[#dbdfe5] text-center rounded-[8px] flex items-center justify-center ${
+                context?.isDark
+                  ? "bg-[#0E1018] border-none text-[#64748b]"
+                  : "bg-transparent border border-[#dbdfe5]"
+              }`}
+            >
+              <RiLinkedinBoxFill />
+            </span>
+          </a>
+          <a href={`mailto:${import.meta.env.VITE_EMAIL}`}>
+            <span
+              className={`w-[40px] h-[40px] leading-[40px] border border-[#dbdfe5] text-center rounded-[8px] flex items-center justify-center ${
+                context?.isDark
+                  ? "bg-[#0E1018] border-none text-[#64748b]"
+                  : "bg-transparent border border-[#dbdfe5]"
+              }`}
+            >
+              <MdOutlineEmail />
+            </span>
+          </a>
         </div>
       </div>
     </div>

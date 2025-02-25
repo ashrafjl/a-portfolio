@@ -1,21 +1,21 @@
 import React, { createContext, useEffect, useState } from 'react'
 
-export const themeContext = createContext();
+export const ThemeContext = createContext();
 
-export const ThemeContext = ({children})=>{
+export const ThemeContextProvider = ({children})=>{
     const [isDark, setIsDark] = useState(false);
     useEffect(() => {
         const savedMode = localStorage.getItem('isDark');
-        setIsDark(savedMode);
+        setIsDark(savedMode === 'false' ? false : true);
       }, []);
     const handleTheme = ()=>{
         setIsDark(!isDark)
         localStorage.setItem('isDark', !isDark);
     }
 
-    return <themeContext.Provider value={{
+    return <ThemeContext.Provider value={{
         isDark,handleTheme
     }}>
         {children}
-    </themeContext.Provider>
+    </ThemeContext.Provider>
 }

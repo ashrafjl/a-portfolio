@@ -1,14 +1,14 @@
 import React, { useContext, useState } from "react";
 import { Outlet } from "react-router";
 import Header from "./Header";
-import { themeContext, ThemeContext } from "../context/ThemeContext";
+import { ThemeContext, ThemeContextProvider } from "../context/ThemeContext";
 import Sidebar from "./Sidebar";
 import MenuContextProvider from "../context/MenuContext";
 
 const Layout = () => {
-  const context = useContext(themeContext);
+  const context = useContext(ThemeContext);
   useState(()=>{
-    localStorage.setItem('isDark',true)
+    localStorage.setItem('isDark',false)
   },[])
   return (
     <MenuContextProvider>

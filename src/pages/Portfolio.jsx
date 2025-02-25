@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import Card from "../components/Card";
-import { themeContext } from "../context/ThemeContext";
+import { ThemeContext } from "../context/ThemeContext";
 import BLOG_WEB from "../assets/images/blogweb.png";
 import PORTFOLIO_IMG from "../assets/images/portfolioimage.png";
 import EVENT_IMG from "../assets/images/eventshowcase.png";
@@ -70,12 +70,12 @@ const projects = [
 ];
 
 const Portfolio = () => {
-  const context = useContext(themeContext);
+  const context = useContext(ThemeContext);
 
   return (
     <Card>
       <h4
-        className={`font-semibold text-[40px] ${
+        className={`font-semibold sm:text-[40px] text-[28px] ${
           context?.isDark ? "text-dark-heading-color" : "text-primary"
         }`}
       >
@@ -88,7 +88,7 @@ const Portfolio = () => {
       </p>
       {projects?.map((pro) => {
         return (
-          <div className="mt-4 overflow-hidden" key={pro?.id}>
+          <div className="mt-4 overflow-hidden" key={crypto.randomUUID()}>
             <div className="rounded-[10px] overflow-hidden">
               <a href={`${pro.link}`} target="_blank"><img src={pro?.image} alt="" /></a>
             </div>
@@ -96,7 +96,7 @@ const Portfolio = () => {
               <a href={`${pro.link}`} target="_blank"><h4 className={`text-[25px] ${context?.isDark ? 'text-dark-heading-color' : 'text-primary'}`}>{pro?.title}</h4></a>
               <div className="flex flex-wrap gap-2">
                 {
-                  pro?.subTitle.split(',').map((item)=> <span className={`${context?.isDark ? 'bg-dark-bg' : 'bg-light-bg'} p-2 rounded-[8px] text-secondary`}>{item}</span>)
+                  pro?.subTitle.split(',').map((item)=> <span key={crypto.randomUUID()} className={`${context?.isDark ? 'bg-dark-bg' : 'bg-light-bg'} p-2 rounded-[8px] text-secondary`}>{item}</span>)
                 }
               </div>
             </div>

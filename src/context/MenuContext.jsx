@@ -9,6 +9,8 @@ const MenuContextProvider = ({ children }) => {
     const handleResize = ()=>{
       if(window.innerWidth > 640){
         setIsOpen(false)
+      } else{
+        setIsOpen(true)
       }
     }
 

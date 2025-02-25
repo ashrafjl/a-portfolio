@@ -1,10 +1,10 @@
 import React, { useContext, useState } from 'react'
-import { themeContext } from '../context/ThemeContext';
+import { ThemeContext } from '../context/ThemeContext';
 import { TbSend } from "react-icons/tb";
 
 
 const Form = () => {
-    const context = useContext(themeContext);
+    const context = useContext(ThemeContext);
     const [submitted, setSubmitted] = useState(false);
     const [formData, setFormData] = useState({
         name: '',

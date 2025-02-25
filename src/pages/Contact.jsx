@@ -1,14 +1,14 @@
 import React, { useContext } from "react";
 import Card from "../components/Card";
-import { themeContext } from "../context/ThemeContext";
+import { ThemeContext } from "../context/ThemeContext";
 import Form from "../components/Form";
 
 const Contact = () => {
-  const context = useContext(themeContext);
+  const context = useContext(ThemeContext);
   return (
     <Card>
       <h4
-        className={`text-[40px] font-semibold ${
+        className={`sm:text-[40px] text-[28px] font-semibold ${
           context?.isDark ? "text-dark-heading-color" : "text-primary"
         }`}
       >

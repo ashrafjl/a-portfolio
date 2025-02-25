@@ -6,14 +6,14 @@ import { MdOutlineWorkOutline, MdOutlineMenu, MdClose } from "react-icons/md";
 import { TbPencilBolt } from "react-icons/tb";
 import { HiOutlineChatBubbleBottomCenterText } from "react-icons/hi2";
 import { BsMoonStarsFill, BsBoxArrowInUpRight } from "react-icons/bs";
-import { themeContext } from "../context/ThemeContext";
+import { ThemeContext } from "../context/ThemeContext";
 import { IoIosSunny } from "react-icons/io";
 import { useMenuContext } from "../context/MenuContext";
 import MobileNav from "./MobileNav";
 
 
 const Header = () => {
-    const context = useContext(themeContext);
+    const context = useContext(ThemeContext);
     const { isOpen, handleMenu } = useMenuContext()
     const phone = import.meta.env.VITE_PHONE;
     

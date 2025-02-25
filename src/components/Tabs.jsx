@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
-import { themeContext } from "../context/ThemeContext";
+import { ThemeContext } from "../context/ThemeContext";
 
 const Tabs = ({ handleTab, tabs }) => {
-    const context = useContext(themeContext);
+    const context = useContext(ThemeContext);
     const [currentIndex, setCurrentIndex] = useState(0);
     const handleClick = (id)=>{
       setCurrentIndex(id)

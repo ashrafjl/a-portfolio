@@ -12,7 +12,7 @@ import {
 } from "react-icons/fa";
 import CAPITAL_LOGO from "../assets/images/capitaltechnology.png";
 import KELLTON_LOGO from "../assets/images/kellton.png";
-import { themeContext } from "../context/ThemeContext";
+import { ThemeContext } from "../context/ThemeContext";
 import BLOG_WEB from "../assets/images/blogweb.png";
 import TMDB from "../assets/images/tmdb.png";
 import BLOG_ADMIN from "../assets/images/blogadmin.png";
@@ -35,7 +35,7 @@ const skills = [
 ];
 
 const Home = () => {
-  const context = useContext(themeContext)
+  const context = useContext(ThemeContext)
   return (
     <div className="flex sm:flex-row flex-col w-full gap-3">
       <div className="sm:w-1/2 w-full">

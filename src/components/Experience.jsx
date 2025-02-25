@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
-import { themeContext } from "../context/ThemeContext";
+import { ThemeContext } from "../context/ThemeContext";
 
 const skills = [
   { id: "html", title: "HTML", percentage: "90" },
@@ -10,7 +10,7 @@ const skills = [
 ];
 
 const Experience = () => {
-  const context = useContext(themeContext);
+  const context = useContext(ThemeContext);
 
   return (
     <div>

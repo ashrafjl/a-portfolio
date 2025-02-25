@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import Card from "../components/Card";
-import { themeContext } from "../context/ThemeContext";
+import { ThemeContext } from "../context/ThemeContext";
 import CountUp from "../components/CountUp";
 import Tabs from "../components/Tabs";
 import Skills from "../components/Skills";
@@ -15,7 +15,7 @@ const tabsData = [
 ]
 
 const About = () => {
-  const context = useContext(themeContext);
+  const context = useContext(ThemeContext);
   const [tabs, setTabs] = useState(tabsData)
   const handleTab = ()=>{
     
@@ -23,9 +23,9 @@ const About = () => {
   return (
     <Card>
       <div>
-        <div className="flex justify-between">
+        <div className="flex sm:flex-row flex-col justify-between">
           <h1
-            className={`text-[40px] font-semibold leading-[100%] m-0 ${
+            className={`sm:text-[40px] text-[28px] font-semibold leading-[100%] order-1 sm:order-none gap-3 sm:m-0 mt-3 ${
               context?.isDark ? "text-dark-heading-color" : "text-primary"
             }`}
           >
@@ -45,7 +45,7 @@ const About = () => {
           </div>
         </div>
         <div className="max-w-[600px] mt-[30px]">
-          <p className="text-[24px] text-[#576076] font-medium leading-[140%]">
+          <p className="sm:text-[24px] text-xl text-[#576076] font-medium leading-[140%]">
           A versatile Full-Stack Developer 🚀 passionate about building seamless, high-performance web applications from the ground up. Combining creativity with technical expertise, I deliver end-to-end solutions that are visually stunning, user-centric, and optimized for performance across all devices.
           </p>
         </div>
